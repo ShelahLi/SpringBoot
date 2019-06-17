@@ -3,7 +3,7 @@ debug: false
 
 logging:
   level:
-    root:info
+    #root:info
   file: /Users/mac/springboot-prd.log
 
 spring:

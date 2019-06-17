@@ -19,19 +19,33 @@
     </properties>
 
     <dependencies>
+
+        <!--全栈Web开发模块，包含嵌入式tomcat和springMVC-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <!--通用测试模块-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!--自动为springboot构建的应用提供一系列用于监控的端点-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+
     </dependencies>
 
     <build>
+        <!--引入了Spring Boot的Maven插件， 该插件非常实用， 可以帮助我们方便地启停应用，
+        这样在开发时就不用每次去找主类或是打包成jar来运行微 服务，只需要通过mvn spring-boot:run
+        命令就可以快速启动SpringBoot应用。-->
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

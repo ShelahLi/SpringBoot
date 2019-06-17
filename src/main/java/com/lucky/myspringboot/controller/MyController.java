@@ -18,6 +18,7 @@ public class MyController {
     private Boolean showAdvert;
 
     @RequestMapping("/out")
+    //不加ResponseBody会访问success.jsp页面
     @ResponseBody
     public String out(){
         return "success";
